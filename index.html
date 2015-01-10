@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather API Hack</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="main.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery_cycle.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	<script src="app.js"></script>
+</head>
+<body id="container">
+	<header>Weather Comparator</header>
+	<div id="mainContainer">
+		<div id="slideshow">
+			<img src="images/sunny.jpg" class="bgM"/>
+			<img src="images/nature.jpg" class="bgM"/>
+			<img src="images/rainbow.jpg" class="bgM"/>
+			<img src="images/pleasant.jpg" class="bgM"/>
+		</div>
+		<div id="inputContainer">
+			<h2>Compare weather between two cities</h2>
+			<br/>
+			<div id="inputDiv">
+				<form id="inputForm" onsubmit="return false;">
+				<br>
+				<div class="ui-widget same">
+				<label class="cityLbl"><strong>Source city: </strong></label>
+				<input type="text" id="source" class="city"></input>
+				</div>
+				<div class="ui-widget same">
+				<label class="cityLbl"><strong>Destination city: </strong></label>
+				<input type="text" id="dest" class="city"></input>
+				</div>
+				<input type="submit" id="submit" value="Go"></input>
+				<br/><br/>
+				<div id="choice">
+					<input type="radio" name="forecast" value="forecast" checked="true"/>3 Day
+					<input type="radio" name="forecast" value="forecast10day"/>10 Day
+				</div>
+				</form>
+				<span class="result" id="srcResult"></span>
+				<span class = "result" id="destResult"></span>
+			</div>
+		</div>
+		<div id="clear">
+		</div>
+	</div>
+	<footer></footer>
+</body>
+</html>
